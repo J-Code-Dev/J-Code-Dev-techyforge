@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 2000px;
+}
+
+/* Navbar styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #ff6b6b, #556270);
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+/* Shrink effect when scrolling using CSS only */
+body:has(#section2:target) nav, 
+body:has(#section3:target) nav {
+    padding: 10px 0;
+    background: linear-gradient(to right, #556270, #ff6b6b);
+}
+
+/* Content to simulate scrolling */
+.content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Simulate sticky effect on hover */
+nav:hover {
+    padding: 10px 0; /* Reduce height */
+    background: linear-gradient(to right, #556270, #ff6b6b); /* Change background color */
+  }
+
+
+

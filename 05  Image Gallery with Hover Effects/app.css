@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+  }
+/* General Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Gallery Container */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    padding: 20px;
+  }
+  
+  /* Image Container */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden; /* Prevents layout break on scale */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+  
+  /* Image Styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .image-container:hover img {
+    transform: scale(1.1); /* Scale up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
+  }
+  
+  /* Text Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Show Overlay on Hover */
+  .image-container:hover .overlay {
+    opacity: 1; /* Visible on hover */
+  }
+  
+  /* Overlay Text Styling */
+  .overlay p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
