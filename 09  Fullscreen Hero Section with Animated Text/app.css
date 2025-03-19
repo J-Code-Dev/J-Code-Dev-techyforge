@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Centered text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* Text styling */
+.hero-text h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0; /* Start with invisible text */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+    opacity: 0; /* Start with invisible text */
+    animation: fadeIn 2s ease-in-out 1s forwards; /* Delay the animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

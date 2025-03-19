@@ -1,0 +1,67 @@
+/* Center the card on the screen */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif; /* Use Google Font */
+  }
+  
+  /* Card container */
+  .card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px; /* Add perspective for 3D effect */
+  }
+  
+  /* Front and back sides of the card */
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /* Hide the back side when flipped */
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Front side styling */
+  .front {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .front img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1px;
+  }
+  
+  /* Back side styling */
+  .back {
+    background-color: #F58A51;
+    color: white;
+    transform: rotateY(180deg); /* Initially hide the back side */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Flip effect on hover */
+  .card:hover .front {
+    transform: rotateY(180deg); /* Rotate front side */
+  }
+  
+  .card:hover .back {
+    transform: rotateY(0deg); /* Rotate back side to visible */
+  }

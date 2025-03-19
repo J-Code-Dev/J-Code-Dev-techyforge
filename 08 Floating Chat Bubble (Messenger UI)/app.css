@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Chat Bubble Styling */
+.chat-bubble {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Default background color */
+    color: white;
+    border-radius: 50%; /* Makes it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  }
+  
+  /* Hover Effects */
+  .chat-bubble:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    transform: translateY(-5px); /* Bounce effect */
+  }
+  
+  @media (max-width: 600px) {
+    .chat-bubble {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+
+  

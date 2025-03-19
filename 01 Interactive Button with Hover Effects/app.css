@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+   
+}
+/* Reset default margin and padding */
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;    
+  }
+  
+  /* Button styling */
+  .interactive-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600; /* Use the semi-bold weight from Poppins */
+    font-family: 'Poppins', sans-serif; /* Apply Google Font */
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(to right, blue, purple);
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effects */
+  .interactive-button:hover {
+    background: linear-gradient(to right, purple, pink);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
